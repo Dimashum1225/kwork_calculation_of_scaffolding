@@ -1,0 +1,83 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/border"
+    >
+
+    <!-- Название элемента -->
+
+    <!-- Количество элемента -->
+    <TextView
+        android:id="@+id/tvElementName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Element Name"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvElementQuantity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvElementQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvElementPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvElementName" />
+
+    <!-- Цена элемента -->
+    <TextView
+        android:id="@+id/tvElementPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Element Price"
+        android:textSize="16sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tvElementQuantity"
+        app:layout_constraintTop_toTopOf="@+id/tvElementName"
+        app:layout_constraintEnd_toStartOf="@+id/tv_allPrice"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <!-- Общая цена элемента -->
+    <TextView
+        android:id="@+id/tv_allPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price"
+        app:layout_constraintStart_toEndOf="@+id/tvElementPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvElementName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <!-- Вес элемента -->
+    <TextView
+        android:id="@+id/tv_ElementWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ElementTotalWeight"
+        app:layout_constraintStart_toEndOf="@+id/tvElementQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/tvElementName" />
+
+    <!-- Общий вес элемента -->
+    <TextView
+        android:id="@+id/tv_ElementTotalWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Weight"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_ElementWeight"
+        app:layout_constraintTop_toBottomOf="@+id/tvElementName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
